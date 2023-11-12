@@ -1,0 +1,197 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+input, button, textarea, select {
+  font: inherit;
+}
+p, h1, h2, h3, h4, h5, h6 {
+  overflow-wrap: break-word;
+}
+
+:root {
+  --color-darkMagenta: hsl(300, 43%, 22%);
+  --color-softPink: hsl(333, 80%, 67%);
+  --color-darkGrayishMagenta: hsl(303, 10%, 53%);
+  --color-lightGrayishMagenta: hsl(300, 24%, 96%);
+  --color-white: hsl(0, 0%, 100%);
+  
+  --ff: 'League Spartan', sans-serif;
+  --fw-base: 400;
+  --fw-medium: 500;
+  --fw-bold: 700;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  font-family: var(--ff);
+  font-size: 1rem;
+  margin: 3rem 1.5rem;
+  
+  background-color: var(--color-white);
+  background-image: url(bg-pattern-top-mobile.svg), url(bg-pattern-bottom-mobile.svg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: left 0vw top 0vh, right 0vw bottom 0vh;
+}
+
+@media (min-width: 768px) {
+  body {
+    background-image: url(bg-pattern-top-desktop.svg), url(bg-pattern-bottom-desktop.svg);
+  }
+}
+
+main {
+  max-width: 1020px;
+}
+
+.intro {
+  display: grid;
+}
+
+@media (min-width: 768px) {
+  .intro {
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+  
+}
+
+header {
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  header {
+    text-align: left;
+  }
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: var(--fw-bold);
+  color: var(--color-darkMagenta);
+  line-height: 0.8;
+  padding: 1rem 0;
+}
+
+header p {
+  color: var(--color-darkGrayishMagenta);
+  font-weight: var(--fw-medium);
+}
+
+.ratings {
+  display: grid;
+  gap: 1rem;
+  padding: 2rem 0;
+  text-align: center;
+}
+.star {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.review {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5rem;
+  background-color: var(--color-lightGrayishMagenta);
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.review p {
+  color: var(--color-darkMagenta);
+  font-weight: var(--fw-bold);
+}
+
+.user {
+  display: grid;
+  gap: 1.5rem;
+  background-color: var(--color-darkMagenta);
+  padding: 2.5rem;
+  border-radius: 0.5rem;
+}
+
+.comments {
+  display: grid;
+  gap: 1rem;
+}
+
+@media (min-width: 768px) {
+  .comments {
+    grid-auto-flow: column;
+  }
+}
+
+.user p{
+  color: var(--color-white);
+  font-weight: var(--fw-medium);
+}
+
+h2 {
+  color: var(--color-white);
+  font-size: 1.2rem;
+  font-weight: var(--fw-bold);
+}
+
+.user-info {
+  display: flex;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.user-info img {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+}
+
+.user-info p {
+  color: var(--color-softPink);
+}
+
+@media (min-width: 768px) {
+  .colton {
+    margin-bottom: 40px;
+  }
+  
+  .irene {
+    margin-top: 20px;
+    margin-bottom: 20px
+  }
+  
+  .anne {
+    margin-top: 40px;
+    
+  }
+}
+
+@media (min-width: 768px) {
+  .review-star {
+    margin-right: 60px;
+  }
+  
+  .reportGuru {
+    margin-left: 30px;
+    margin-right: 30px;
+  }
+  
+  .bestTech {
+    margin-left: 60px;
+  }
+}
