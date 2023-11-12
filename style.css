@@ -55,6 +55,12 @@ main {
   max-width: 1020px;
 }
 
+@media (min-width: 768px) {
+  main {
+    padding: 3rem;
+  }
+}
+
 .intro {
   display: grid;
 }
